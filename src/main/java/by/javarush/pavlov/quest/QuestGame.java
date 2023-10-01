@@ -4,7 +4,7 @@ public class QuestGame {
     private String playerName;
     private String currentStep;
 
-    public QuestGame(String playerName, String currentStep) {
+    public QuestGame(String playerName) {
         this.playerName = playerName;
         this.currentStep = currentStep;
     }
