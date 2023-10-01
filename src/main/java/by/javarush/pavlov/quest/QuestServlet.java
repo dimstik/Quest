@@ -28,6 +28,8 @@ public class QuestServlet extends HttpServlet {
             request.getRequestDispatcher("/revealIdentity.jsp").forward(request, response);
         } else if (step.equals("win")) {
             request.getRequestDispatcher("/win.jsp").forward(request, response);
+        } else if (step.equals("lose")) {
+            request.getRequestDispatcher("/lose").forward(request, response);
         }
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
