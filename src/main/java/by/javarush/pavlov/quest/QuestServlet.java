@@ -18,11 +18,13 @@ public class QuestServlet extends HttpServlet {
         String step = game.getCurrentStep();
         String playerName = game.getPlayerName();
 
-        if (step.equals("/start")) {
-            request.getRequestDispatcher("/start").forward(request, response);
+        if (step.equals("start")) {
+            request.getRequestDispatcher("/start.jsp").forward(request, response);
+        } else if (step.equals("acceptUFO")) {
+            request.getRequestDispatcher("/acceptUFO.jsp").forward(request, response);
         }
     }
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 
     }
 }
