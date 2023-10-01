@@ -39,6 +39,7 @@ public class QuestServlet extends HttpServlet {
             String playerName = game.getPlayerName();
             game = new QuestGame(playerName);
             game.setCurrentStep("acceptUFO");
+            response.sendRedirect("quest");
         }
     }
 }
