@@ -14,8 +14,13 @@ public class QuestServlet extends HttpServlet {
         game = new QuestGame("");
     }
 
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String step = game.getCurrentStep();
+        String playerName = game.getPlayerName();
 
+        if (step.equals("/start")) {
+            request.getRequestDispatcher("/start").forward(request, response);
+        }
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
