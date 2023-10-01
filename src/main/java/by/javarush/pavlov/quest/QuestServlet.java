@@ -24,6 +24,8 @@ public class QuestServlet extends HttpServlet {
             request.getRequestDispatcher("/acceptUFO.jsp").forward(request, response);
         } else if (step.equals("goToBridge")) {
             request.getRequestDispatcher("/goToBridge.jsp").forward(request, response);
+        } else if (step.equals("revealIdentity")) {
+            request.getRequestDispatcher("/revealIdentity.jsp").forward(request, response);
         }
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
