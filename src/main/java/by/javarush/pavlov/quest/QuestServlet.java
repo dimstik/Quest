@@ -33,6 +33,11 @@ public class QuestServlet extends HttpServlet {
         }
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        String step = game.getCurrentStep();
 
+        if (step.equals("start")) {
+            String playerName = game.getPlayerName();
+
+        }
     }
 }
