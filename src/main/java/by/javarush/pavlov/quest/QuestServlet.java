@@ -5,7 +5,6 @@ import java.io.*;
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
-import jakarta.servlet.annotation.*;
 
 public class QuestServlet extends HttpServlet {
     private QuestGame game;
@@ -33,6 +32,13 @@ public class QuestServlet extends HttpServlet {
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String step = game.getCurrentStep();
+        String restartButton =request.getParameter("restart");
+        if (restartButton != null) {
+            game = new QuestGame("");
+            game.setCurrentStep("start");
+            response.sendRedirect("quest");
+            return;
+        }
 
         if (step.equals("start")) {
             String playerName = game.getPlayerName();
