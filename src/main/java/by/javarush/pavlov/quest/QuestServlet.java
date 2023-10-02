@@ -47,6 +47,8 @@ public class QuestServlet extends HttpServlet {
                 game.setCurrentStep("lose");
             }
             response.sendRedirect("quest");
+        } else if (step.equals("goToBridge")){
+
         }
     }
 }
