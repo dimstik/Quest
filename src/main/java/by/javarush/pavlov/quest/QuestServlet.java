@@ -47,6 +47,7 @@ public class QuestServlet extends HttpServlet {
             game.setCurrentStep("acceptUFO");
             HttpSession session = request.getSession();
             session.setAttribute("playerName", playerName);
+            if (playerName != null && !playerName.isEmpty()) {
 
             response.sendRedirect("quest");
         } else if (step.equals("acceptUFO")) {
