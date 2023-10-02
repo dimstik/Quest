@@ -3,4 +3,12 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0">
+    <servlet>
+        <servlet-name>QuestServlet</servlet-name>
+        <servlet-class>by.javarush.pavlov.quest.QuestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+    <servlet-name>QuestServlet</servlet-name>
+    <url-pattern>/quest</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -16,7 +16,6 @@ public class QuestServlet extends HttpServlet {
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         String step = game.getCurrentStep();
-        String playerName = game.getPlayerName();
 
         if (step.equals("start")) {
             request.getRequestDispatcher("/start.jsp").forward(request, response);
