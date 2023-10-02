@@ -52,7 +52,11 @@ public class QuestServlet extends HttpServlet {
                 if (gamesPlayed == null) {
                     gamesPlayed = new HashMap<>();
                     gamesPlayed.put("gamesPlayed", 1);
+                } else {
+                    int currentGamesPlayed = gamesPlayed.getOrDefault(playerName, 0);
+                    gamesPlayed.put(playerName, currentGamesPlayed + 1);
                 }
+                session.setAttribute("gamesPlayed", gamesPlayed);
             }
             response.sendRedirect("quest");
         } else if (step.equals("acceptUFO")) {
