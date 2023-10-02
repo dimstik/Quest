@@ -42,16 +42,16 @@ public class QuestServlet extends HttpServlet {
         }
 
         if (step.equals("start")) {
-            String playerName = game.getPlayerName();
+            String playerName = request.getParameter("playerName");
             game = new QuestGame(playerName);
             game.setCurrentStep("acceptUFO");
             HttpSession session = request.getSession();
             session.setAttribute("playerName", playerName);
             if (playerName != null && !playerName.isEmpty()) {
-                HashMap<String,Integer> gamesPlayed = (HashMap<String, Integer>) session.getAttribute("playerName");
+                HashMap<String,Integer> gamesPlayed = (HashMap<String, Integer>) session.getAttribute("gamesPlayed");
                 if (gamesPlayed == null) {
                     gamesPlayed = new HashMap<>();
-                    gamesPlayed.put("gamesPlayed", 1);
+                    gamesPlayed.put(playerName, 1);
                 } else {
                     int currentGamesPlayed = gamesPlayed.getOrDefault(playerName, 0);
                     gamesPlayed.put(playerName, currentGamesPlayed + 1);
