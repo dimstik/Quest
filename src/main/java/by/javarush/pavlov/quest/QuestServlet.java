@@ -42,7 +42,11 @@ public class QuestServlet extends HttpServlet {
             response.sendRedirect("quest");
         } else if (step.equals("acceptUFO")) {
             String choice = request.getParameter("choice");
-
+            if ("accept".equals(choice)) {
+                game.setCurrentStep("goToBridge");
+            } else {
+                game.setCurrentStep("lose");
+            }
         }
     }
 }
