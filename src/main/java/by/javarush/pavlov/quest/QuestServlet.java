@@ -48,7 +48,12 @@ public class QuestServlet extends HttpServlet {
             }
             response.sendRedirect("quest");
         } else if (step.equals("goToBridge")){
-
+            String choice = request.getParameter("choice");
+            if ("yes".equals(choice)) {
+                game.setCurrentStep("revealIdentity");
+            } else {
+                game.setCurrentStep("lose");
+            }
         }
     }
 }
