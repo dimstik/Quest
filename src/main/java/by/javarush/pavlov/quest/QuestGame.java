@@ -6,7 +6,7 @@ public class QuestGame {
 
     public QuestGame(String playerName) {
         this.playerName = playerName;
-        this.currentStep = currentStep;
+        this.currentStep = "start";
     }
 
     public String getPlayerName() {
