@@ -62,6 +62,7 @@ public class QuestServlet extends HttpServlet {
             } else {
                 game.setCurrentStep("lose");
             }
+            response.sendRedirect("quest");
         }
     }
 }
