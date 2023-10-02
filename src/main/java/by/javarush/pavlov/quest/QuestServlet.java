@@ -1,6 +1,7 @@
 package by.javarush.pavlov.quest;
 
 import java.io.*;
+import java.util.HashMap;
 
 import jakarta.servlet.ServletConfig;
 import jakarta.servlet.ServletException;
@@ -44,6 +45,9 @@ public class QuestServlet extends HttpServlet {
             String playerName = game.getPlayerName();
             game = new QuestGame(playerName);
             game.setCurrentStep("acceptUFO");
+            HttpSession session = request.getSession();
+            session.setAttribute("playerName", playerName);
+
             response.sendRedirect("quest");
         } else if (step.equals("acceptUFO")) {
             String choice = request.getParameter("choice");
