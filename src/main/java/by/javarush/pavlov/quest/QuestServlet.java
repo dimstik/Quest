@@ -40,6 +40,8 @@ public class QuestServlet extends HttpServlet {
             game = new QuestGame(playerName);
             game.setCurrentStep("acceptUFO");
             response.sendRedirect("quest");
+        } else if (step.equals("acceptUFO")) {
+
         }
     }
 }
