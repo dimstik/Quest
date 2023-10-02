@@ -17,4 +17,8 @@ public class QuestGameTest {
         assertEquals("Player1", game.getPlayerName());
         assertEquals("start", game.getCurrentStep());
     }
+    @Test
+    public void testGetCurrentStep() {
+        assertEquals("start", game.getCurrentStep());
+    }
 }
