@@ -17,17 +17,17 @@ public class QuestServlet extends HttpServlet {
         String step = game.getCurrentStep();
 
         if (step.equals("start")) {
-            request.getRequestDispatcher("/start.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/start.jsp").forward(request, response);
         } else if (step.equals("acceptUFO")) {
-            request.getRequestDispatcher("/acceptUFO.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/acceptUFO.jsp").forward(request, response);
         } else if (step.equals("goToBridge")) {
-            request.getRequestDispatcher("/goToBridge.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/goToBridge.jsp").forward(request, response);
         } else if (step.equals("revealIdentity")) {
-            request.getRequestDispatcher("/revealIdentity.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/revealIdentity.jsp").forward(request, response);
         } else if (step.equals("win")) {
-            request.getRequestDispatcher("/win.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/win.jsp").forward(request, response);
         } else if (step.equals("lose")) {
-            request.getRequestDispatcher("/lose.jsp").forward(request, response);
+            request.getRequestDispatcher("/jsp/lose.jsp").forward(request, response);
         }
     }
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
