@@ -56,7 +56,12 @@ public class QuestServlet extends HttpServlet {
             }
             response.sendRedirect("quest");
         } else if (step.equals("revealIdentity")) {
-
+            String choice = request.getParameter("choice");
+            if ("truth".equals(choice)) {
+                game.setCurrentStep("win");
+            } else {
+                game.setCurrentStep("lose");
+            }
         }
     }
 }
