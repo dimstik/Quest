@@ -21,4 +21,15 @@ public class QuestGameTest {
     public void testGetCurrentStep() {
         assertEquals("start", game.getCurrentStep());
     }
+    @Test
+    public void testSetCurrentStep() {
+        game.setCurrentStep("acceptUFO");
+        assertEquals("acceptUFO", game.getCurrentStep());
+
+        game.setCurrentStep("goToBridge");
+        assertEquals("goToBridge", game.getCurrentStep());
+
+        game.setCurrentStep("revealIdentity");
+        assertEquals("revealIdentity", game.getCurrentStep());
+    }
 }
