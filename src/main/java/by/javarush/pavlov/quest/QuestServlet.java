@@ -49,7 +49,10 @@ public class QuestServlet extends HttpServlet {
             session.setAttribute("playerName", playerName);
             if (playerName != null && !playerName.isEmpty()) {
                 HashMap<String,Integer> gamesPlayed = (HashMap<String, Integer>) session.getAttribute("playerName");
-
+                if (gamesPlayed == null) {
+                    gamesPlayed = new HashMap<>();
+                    gamesPlayed.put("gamesPlayed", 1);
+                }
             }
             response.sendRedirect("quest");
         } else if (step.equals("acceptUFO")) {
