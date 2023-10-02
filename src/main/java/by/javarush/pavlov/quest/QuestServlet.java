@@ -48,7 +48,9 @@ public class QuestServlet extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("playerName", playerName);
             if (playerName != null && !playerName.isEmpty()) {
+                HashMap<String,Integer> gamesPlayed = (HashMap<String, Integer>) session.getAttribute("playerName");
 
+            }
             response.sendRedirect("quest");
         } else if (step.equals("acceptUFO")) {
             String choice = request.getParameter("choice");
