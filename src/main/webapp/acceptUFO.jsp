@@ -9,7 +9,7 @@
 <form action="quest" method="post">
 <input type="radio" name="choice" value="accept" required>Принять
     <input type="radio" name="choice" value="reject" required>Отклонить
-    <input type="text" value="Следующий вопрос">
+    <input type="submit" value="Следующий вопрос">
 </form>
 </body>
 </html>
