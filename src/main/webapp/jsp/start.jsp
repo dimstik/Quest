@@ -37,6 +37,5 @@
         <td><%= clientIp %></td>
     </tr>
 </table>
-
 </body>
 </html>
