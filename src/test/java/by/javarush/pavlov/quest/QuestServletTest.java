@@ -19,6 +19,21 @@ public class QuestServletTest {
         when(config.getServletName()).thenReturn("QuestServlet");
         servlet.init(config);
 
-        assertNotNull(servlet); // Проверяем, что сервлет успешно инициализирован
+        assertNotNull(servlet);
+    }
+    @Test
+    public void testDoGetStartStep() throws ServletException, IOException {
+        QuestServlet servlet = new QuestServlet();
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        HttpSession session = mock(HttpSession.class);
+        when(request.getSession()).thenReturn(session);
+        when(session.getAttribute("gamesPlayed")).thenReturn(null);
+        RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
+        when(request.getRequestDispatcher("/jsp/start.jsp")).thenReturn(requestDispatcher);
+
+        servlet.doGet(request, response);
+
+        verify(requestDispatcher).forward(request, response);
     }
 }
