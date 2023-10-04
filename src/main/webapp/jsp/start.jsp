@@ -8,6 +8,13 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
+<style>
+    body {
+        background-image: url('<%= request.getContextPath() %>/images/ufo.jpg'); /* Укажите путь к вашему изображению */
+        background-size: cover; /* Растягивать изображение на весь экран */
+        background-repeat: repeat; /* Запретить повторение изображения */
+    }
+</style>
 <h1 style="font-weight: bold; color: #000000;">Добро пожаловать в текстовый квест</h1>
 <form action="quest" method="post">
     <i>Введите имя игрока:</i> <input type="text" name="playerName" required>
