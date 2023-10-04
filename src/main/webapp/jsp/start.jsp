@@ -26,7 +26,7 @@
     HashMap<String, Integer> gamesPlayed = (HashMap<String, Integer>) request.getSession().getAttribute("gamesPlayed");
     int gamesCount = (gamesPlayed != null) ? gamesPlayed.getOrDefault(playerName, 0) : 0;
 %>
-<table>
+<table class="black-text-table">
     <tr>
         <th>Параметр</th>
         <th>Значение</th>

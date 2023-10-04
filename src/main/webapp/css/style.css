@@ -10,9 +10,12 @@ th, td {
 }
 
 th {
-    background-color: #f2f2f2;
+    background-color: transparent;
 }
 
 td {
-    color: #655e5e;
+    color: #000000;
+}
+.black-text-table {
+    color: black; /* Задаем цвет текста внутри таблицы черным */
 }
