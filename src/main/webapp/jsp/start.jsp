@@ -7,9 +7,9 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Добро пожаловать в текстовый квест</h1>
+<h1 style="font-weight: bold; color: #000000;">Добро пожаловать в текстовый квест</h1>
 <form action="quest" method="post">
-    Введите имя игрока: <input type="text" name="playerName" required>
+    <i>Введите имя игрока:</i> <input type="text" name="playerName" required>
     <input type="submit" class="btn btn-primary" value="Начать игру">
 </form>
 <%
