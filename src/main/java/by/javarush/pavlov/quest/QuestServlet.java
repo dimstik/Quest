@@ -37,6 +37,9 @@ public class QuestServlet extends HttpServlet {
         if (restartButton != null) {
             game = new QuestGame("");
             game.setCurrentStep("start");
+            // Также можно сбросить имя игрока в сессии, если оно хранится там
+            HttpSession session = request.getSession();
+            session.removeAttribute("playerName");
             request.getRequestDispatcher("/jsp/start.jsp").forward(request, response);
             return;
         }

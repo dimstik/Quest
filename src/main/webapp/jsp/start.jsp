@@ -26,7 +26,7 @@
     </tr>
     <tr>
         <td>Имя игрока:</td>
-        <td><%= playerName %></td>
+        <td><%= playerName != null ? playerName : "" %></td>
     </tr>
     <tr>
         <td>Количество игр:</td>
