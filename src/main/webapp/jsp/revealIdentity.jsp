@@ -3,13 +3,14 @@
 <html>
 <head>
     <title>Текстовый квест</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h1><br>Ты поднялся на мостик.</br>Кто ты?</h1>
 <form action="quest" method="post">
   <input type="radio" name="choice" value="truth" required>Сказать правду
   <input type="radio" name="choice" value="lie" required>Солгать
-  <input type="submit" value="Следующий вопрос">
+  <input type="submit" class="btn btn-primary" value="Следующий вопрос">
   </form>
 <%
     String playerName = (String) request.getSession().getAttribute("playerName");

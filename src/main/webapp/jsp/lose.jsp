@@ -3,12 +3,13 @@
 <html>
 <head>
     <title>Тестовый квест</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h1>Конец игры</h1>
 <p>Вы проиграли. Не расстраивайтесь, хотите начать заново?</p>
 <form action="quest" method="post">
-    <input type="submit" name="restart" value="Начать заново">
+    <input type="submit" class="btn btn-primary" name="restart" value="Начать заново">
 </form>
 <%
     String playerName = (String) request.getSession().getAttribute("playerName");

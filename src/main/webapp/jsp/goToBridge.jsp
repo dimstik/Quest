@@ -4,13 +4,14 @@
 <html>
 <head>
     <title>Тестовый квест</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h1><br>Ты принял вызов.</br>Подняться на мостик к капитану?</h1>
 <form action="quest" method="post">
 <input type="radio" name="choice" value="yes" required>Подняться
 <input type="radio" name="choice" value="no" required>Отказаться
-<input type="submit" value="Следующий вопрос">
+<input type="submit" class="btn btn-primary" value="Следующий вопрос">
     <%
         String playerName = (String) request.getSession().getAttribute("playerName");
         String clientIp = request.getLocalAddr();
