@@ -8,7 +8,7 @@ import jakarta.servlet.ServletException;
 import jakarta.servlet.http.*;
 
 public class QuestServlet extends HttpServlet {
-    private QuestGame game;
+    private QuestGame game = new QuestGame("");
     public void init(ServletConfig config) throws ServletException {
         super.init(config);
         game = new QuestGame("");
