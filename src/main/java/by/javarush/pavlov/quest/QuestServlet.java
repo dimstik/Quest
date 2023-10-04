@@ -37,7 +37,7 @@ public class QuestServlet extends HttpServlet {
         if (restartButton != null) {
             game = new QuestGame("");
             game.setCurrentStep("start");
-            response.sendRedirect("quest");
+            request.getRequestDispatcher("/jsp/start.jsp").forward(request, response);
             return;
         }
 

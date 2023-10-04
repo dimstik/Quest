@@ -36,4 +36,23 @@ public class QuestServletTest {
 
         verify(requestDispatcher).forward(request, response);
     }
+    @Test
+    public void testDoPostRestart() throws ServletException, IOException {
+        QuestServlet servlet = new QuestServlet();
+        HttpServletRequest request = mock(HttpServletRequest.class);
+        HttpServletResponse response = mock(HttpServletResponse.class);
+        HttpSession session = mock(HttpSession.class);
+        when(request.getParameter("restart")).thenReturn("true");
+        when(request.getSession()).thenReturn(session);
+        when(session.getAttribute("gamesPlayed")).thenReturn(null);
+        RequestDispatcher requestDispatcher = mock(RequestDispatcher.class);
+
+        // Настройка мока requestDispatcher
+        when(request.getRequestDispatcher("/jsp/start.jsp")).thenReturn(requestDispatcher);
+
+        servlet.doPost(request, response);
+
+        // Проверяем, что запрос был перенаправлен на начальную JSP с использованием одного и того же мока requestDispatcher
+        verify(requestDispatcher).forward(request, response);
+    }
 }
