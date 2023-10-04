@@ -8,8 +8,18 @@
 <body>
 <h1><br>Ты поднялся на мостик.</br>Кто ты?</h1>
 <form action="quest" method="post">
-  <input type="radio" name="choice" value="truth" required>Сказать правду
-  <input type="radio" name="choice" value="lie" required>Солгать
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="choice" id="trueChoice" value="truth" required>
+        <label class="form-check-label" for="trueChoice">
+            Сказать правду
+        </label>
+    </div>
+    <div class="form-check">
+  <input class="form-check-input" type="radio" name="choice" id="falseChoice" value="lie" required>
+        <label class="form-check-label" for="falseChoice">
+            Солгать
+        </label>
+    </div>
   <input type="submit" class="btn btn-primary" value="Следующий вопрос">
   </form>
 <%

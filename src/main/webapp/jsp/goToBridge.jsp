@@ -9,8 +9,18 @@
 <body>
 <h1><br>Ты принял вызов.</br>Подняться на мостик к капитану?</h1>
 <form action="quest" method="post">
-<input type="radio" name="choice" value="yes" required>Подняться
-<input type="radio" name="choice" value="no" required>Отказаться
+    <div class="form-check">
+<input class="form-check-input" type="radio" name="choice" id="riseChoice" value="yes" required>
+        <label class="form-check-label" for="riseChoice">
+            Подняться
+        </label>
+    </div>
+    <div class="form-check">
+<input class="form-check-input" type="radio" name="choice" id="refuseChoice" value="no" required
+        <label class="form-check-label" for="refuseChoice">
+            Отказаться
+        </label>
+    </div>
 <input type="submit" class="btn btn-primary" value="Следующий вопрос">
     <%
         String playerName = (String) request.getSession().getAttribute("playerName");

@@ -10,8 +10,18 @@
 <h1><br>Ты потерял память.</br>
 Принять вызов НЛО?</h1>
 <form action="quest" method="post">
-<input type="radio" name="choice" value="accept" required>Принять
-    <input type="radio" name="choice" value="reject" required>Отклонить
+    <div class="form-check">
+<input class="form-check-input" type="radio" name="choice"  id="acceptChoice" value="accept" required>
+        <label class="form-check-label" for="acceptChoice">
+            Принять
+        </label>
+    </div>
+    <div class="form-check">
+        <input class="form-check-input" type="radio" name="choice" id="declineChoice" value="decline">
+        <label class="form-check-label" for="declineChoice">
+            Отклонить
+        </label>
+    </div>
     <input type="submit" class="btn btn-primary" value="Следующий вопрос">
 </form>
 <%
