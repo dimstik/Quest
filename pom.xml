@@ -18,6 +18,7 @@
     </properties>
 
     <dependencies>
+        <!--    Servlet    -->
         <dependency>
             <groupId>jakarta.servlet</groupId>
             <artifactId>jakarta.servlet-api</artifactId>
@@ -34,20 +35,19 @@
             <artifactId>jakarta.servlet.jsp.jstl</artifactId>
             <version>2.0.0</version>
         </dependency>
+            <!--    Tests    -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>test</scope>
         </dependency>
-
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-junit-jupiter</artifactId>
             <version>4.2.0</version>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
