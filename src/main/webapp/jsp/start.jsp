@@ -4,12 +4,13 @@
 <html>
 <head>
     <title>Текстовый квест</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <h1>Добро пожаловать в текстовый квест</h1>
 <form action="quest" method="post">
     Введите имя игрока: <input type="text" name="playerName" required>
-    <input type="submit" value="Начать игру">
+    <input type="submit" class="btn btn-primary" value="Начать игру">
 </form>
 <%
     String playerName = (String) request.getSession().getAttribute("playerName");
