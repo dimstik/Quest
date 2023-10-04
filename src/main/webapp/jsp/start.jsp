@@ -28,20 +28,20 @@
 %>
 <table class="black-text-table">
     <tr>
-        <th>Параметр</th>
-        <th>Значение</th>
+        <th style="font-weight: bold; color: black;">Параметр</th>
+        <th style="font-weight: bold; color: black;">Значение</th>
     </tr>
     <tr>
-        <td>Имя игрока:</td>
-        <td><%= playerName != null ? playerName : "" %></td>
+        <td style="font-weight: bold; color: black;">Имя игрока:</td>
+        <td style="font-weight: bold; color: black;"><%= playerName != null ? playerName : "" %></td>
     </tr>
     <tr>
-        <td>Количество игр:</td>
-        <td><%= gamesCount %></td>
+        <td style="font-weight: bold; color: black;">Количество игр:</td>
+        <td style="font-weight: bold; color: black;"><%= gamesCount %></td>
     </tr>
     <tr>
-        <td>Ваш IP-адрес:</td>
-        <td><%= clientIp %></td>
+        <td style="font-weight: bold; color: black;">Ваш IP-адрес:</td>
+        <td style="font-weight: bold; color: black;"><%= clientIp %></td>
     </tr>
 </table>
 </body>
