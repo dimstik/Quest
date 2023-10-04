@@ -1,0 +1,6 @@
+/* style.css */
+.transparent-input {
+    background-color: transparent;
+    border: 1px solid #ccc; /* Добавьте граничную линию или другие стили по вашему выбору */
+    padding: 10px; /* Добавьте отступы по вашему выбору */
+}

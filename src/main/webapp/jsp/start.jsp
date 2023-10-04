@@ -6,18 +6,18 @@
     <title>Текстовый квест</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/css/transparentStyle.css">
 </head>
 <body>
 <style>
     body {
         background-image: url('<%= request.getContextPath() %>/images/ufo.jpg'); /* Укажите путь к вашему изображению */
-        background-size: cover; /* Растягивать изображение на весь экран */
-        background-repeat: repeat; /* Запретить повторение изображения */
+        background-size: cover;
     }
 </style>
 <h1 style="font-weight: bold; color: #000000;">Добро пожаловать в текстовый квест</h1>
 <form action="quest" method="post">
-    <i>Введите имя игрока:</i> <input type="text" name="playerName" required>
+    <i style="font-weight: bold; color: #000000;">Введите имя игрока:</i> <input type="text" name="playerName" required class="transparent-input">
     <input type="submit" class="btn btn-primary" value="Начать игру">
 </form>
 <%
